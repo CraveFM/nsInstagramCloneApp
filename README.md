@@ -2,14 +2,14 @@
 
 [<img src="https://github.com/angular/angular/blob/master/aio/src/assets/images/logos/angular/angular.png" width="31" height="31"></img>](https://play.nativescript.org/?template=play-ng&id=Wh9rvG&v=49) Adding Basic Gestures to Your Apps
 
-[<img src="https://raw.githubusercontent.com/NativeScript/code-samples/master/screens/basic-gestures.png" width="124" height="270"></img>](https://play.nativescript.org/?template=play-ng&id=Wh9rvG&v=49)
+[<img src="https://raw.githubusercontent.com/NativeScript/code-samples/master/screens/instaclone.gif" width="139" height="375"></img>](https://play.nativescript.org/?template=play-ng&id=QMY4lW&v=2)
 
 Example taken from [:bookmark:`nativescript.rocks`](https://plugins.nativescript.rocks/samples) and can be used as a template since it has already been converted to [NativeScript 7](https://nativescript.org/blog/nativescript-7-announcement)
 
 ## :o: Create a project by using this template
 
 ```
-$ ns create nsGesturesApp --template https://github.com/CraveFM/nsGesturesApp
+$ ns create nsInstagramCloneApp --template https://github.com/CraveFM/nsInstagramCloneApp
 ```
 
 
@@ -18,7 +18,7 @@ $ ns create nsGesturesApp --template https://github.com/CraveFM/nsGesturesApp
 * Create a blank NativeScript/Angular/sass project
 
 ```
-$ ns create nsGesturesApp --template @nativescript/template-blank-ng
+$ ns create nsInstagramCloneApp --template @nativescript/template-blank-ng
 ```
 
 ## :a: Home Component

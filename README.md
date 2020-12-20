@@ -343,7 +343,7 @@ import { FileReaderService } from "./core/file-reader.service";
     }
 ```
 
-## :round_pushpin: template
+:round_pushpin: template
 
 ```xml
 <GridLayout rows="auto, * ,50" class="page">
@@ -666,6 +666,55 @@ import { FileReaderService } from "./core/file-reader.service";
     </GridLayout>
 
 </GridLayout>
+```
+
+:round_pushpin:  StyleSheet
+
+- [ ] Open the `home.component.ts` class file, add the `styleUrls` property to the `@Component` Decorator:
+
+```typescript
+@Component({
+    selector: "Home",
+    templateUrl: "./home.component.html",
+    styleUrls: ['./home.component.css']
+})
+```
+
+- [ ] Add a new file `home.component.ccs`
+
+```
+.imgheaderown {
+    height: 70;
+    width: 70;
+}
+
+.imgheader {
+    height: 60;
+    width: 60;
+}
+
+.shisown {
+    border-bottom-width: 2;
+    border-bottom-color: white;
+}
+
+.followreq-image {
+    color: #dfdfdf;
+    height: 60;
+    width: 60;
+    font-size: 60;
+    padding: 0;
+    margin-bottom: 5;
+    margin-top: 20;
+}
+
+.tabselected {
+    color: #ff4b60;
+}
+
+.tabnotselected {
+    color: black;
+}
 ```
 
 # Resources

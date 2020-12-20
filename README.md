@@ -642,6 +642,23 @@ import { FileReaderService } from "./core/file-reader.service";
 
 * copy `fonts` folder to the `src` directory
 
+* `app.css` Edit
+
+```css
+.btn {
+    font-size: 18;
+}
+
+.fa {
+  font-family: 'FontAwesome'
+}
+
+.android-lbl{
+  color: black;
+}
+```
+
+
 - [ ] Photos
 
 * copy `images` folder to the `src` directory

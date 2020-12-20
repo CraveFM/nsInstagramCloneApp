@@ -635,3 +635,26 @@ import { FileReaderService } from "./core/file-reader.service";
 
 </GridLayout>
 ```
+
+# Resources
+
+- [ ] Fonts
+
+* copy `fonts` folder to the `src` directory
+
+- [ ] Photos
+
+* copy `images` folder to the `src` directory
+
+- [ ] Edit `webpack.config.js` file
+
+* locate the `copyTargets` variable and add the `from: 'images/**'` JSON section like below
+
+```javascript
+const copyTargets = [
+    { from: 'assets/**', noErrorOnMissing: true, globOptions: { dot: false, ...copyIgnore } },
+    { from: 'fonts/**', noErrorOnMissing: true, globOptions: { dot: false, ...copyIgnore } },
+    { from: 'images/**', noErrorOnMissing: true, globOptions: { dot: false, ...copyIgnore } },
+    ...copyReplacements
+  ];
+```

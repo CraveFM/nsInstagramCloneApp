@@ -851,3 +851,12 @@ const routes: Routes = [
 const routes: Routes = [
     { path: "default", component: HomeComponent }
 ];
+
+
+```
+$ find src -name "*.tns.ts" -exec rm {} \;
+```
+
+```
+$ find src -name "*.spec.ts" -exec rm {} \;
+```

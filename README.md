@@ -63,7 +63,9 @@ $ npm install @schematics/angular @nativescript/schematics tslint --save-dev
 ```
 
 ```typescript
+  constructor() { 
     requestPermissions();
+  }
 ```
 
 ```typescript

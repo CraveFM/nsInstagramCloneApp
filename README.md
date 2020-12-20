@@ -38,12 +38,28 @@ $ npm install @angular/cli --global
 $ npm install @schematics/angular @nativescript/schematics tslint --save-dev
 ```
 
-:pushpin: Create the services
+## :gear: Install plugins
+
+```
+% ns plugin add @nativescript/camera
+```
+
+
+:pushpin: Create the `Camera` service
 
 - [ ] Generate the `Camera` service
 
 ```
 % ng generate service core/camera --skipTests=true 
+```
+
+- [ ] Add the instance variables that will be used later on
+
+```
+    public saveToGallery: boolean = false;
+    public keepAspectRatio: boolean = true;
+    public width: number = 200;
+    public height: number = 200;
 ```
 
 
@@ -52,3 +68,5 @@ $ npm install @schematics/angular @nativescript/schematics tslint --save-dev
 :round_pushpin: in the HomeComponent `Class`
 
 - [ ] Add the `log` instance variables that will be used later on
+
+

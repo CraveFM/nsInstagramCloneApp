@@ -21,6 +21,32 @@ $ ns create nsInstagramCloneApp --template https://github.com/CraveFM/nsInstagra
 $ ns create nsInstagramCloneApp --template @nativescript/template-blank-ng
 ```
 
+
+## :b: Creating the services
+
+##### :bangbang: Install Angular CLI
+
+This project uses `Angular` and its `CLI`, if not already installed use the below command to do so:
+
+```
+$ npm install @angular/cli --global
+```
+
+##### :bangbang: Install [NS Schematics](https://github.com/CollegeBoreal/Tutoriels/blob/master/W.Web/T.NativeScript/Schematics.md) to generate the services
+
+```
+$ npm install @schematics/angular @nativescript/schematics tslint --save-dev
+```
+
+:pushpin: Create the services
+
+- [ ] Generate the `Camera` service
+
+```
+% ng generate service core/camera --skipTests=true 
+```
+
+
 ## :a: Home Component
 
 :round_pushpin: in the HomeComponent `Class`

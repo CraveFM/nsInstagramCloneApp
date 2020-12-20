@@ -222,6 +222,17 @@ $ ng generate service core/photo --skipTests=true
   }
 ```
 
+## :m: `app.module.ts` add the services to the provider field of the `@NgModule` Decorator
+
+
+```typescript
+    providers: [
+        PhotosService,
+        CameraService,
+        LocalStorage,
+        FileReaderService
+    ],
+```
 
 
 ## :a: Home Component

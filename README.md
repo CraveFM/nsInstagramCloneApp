@@ -841,3 +841,9 @@ const routes: Routes = [
     }
 ];
 ```
+
+- [ ] `home-routing.module.ts` add `default` path
+
+const routes: Routes = [
+    { path: "default", component: HomeComponent }
+];

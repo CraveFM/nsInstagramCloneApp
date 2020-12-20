@@ -311,6 +311,36 @@ import { FileReaderService } from "./core/file-reader.service";
     }
 ```
 
+- [ ] Add the `takePhoto` method
+
+```typescript
+    takePhoto() {
+        this.camera.takePhoto()
+            .then(imageAsset => {
+                this.onNavtap('loading', '');
+                const options: ModalDialogOptions = {
+                    context: imageAsset,
+                    viewContainerRef: this.vref,
+                    fullscreen: true
+                };
+                setTimeout(() => { //https://github.com/NativeScript/NativeScript/issues/5744#issuecomment-384589739
+                    this.modal.showModal(FilterComponent, options).then((response) => {
+                        if (response == 'success') {
+                            this.onNavtap('profile', '4');
+                        }
+                        else {
+                            this.onNavtap('home', '0');
+                        }
+                    }, error => {
+                        console.log(error);
+                    });
+                }, 1000);
+            }).catch(err => {
+                console.log(err.message);
+            });
+    }
+```
+
 ## :round_pushpin: template
 
 ```xml

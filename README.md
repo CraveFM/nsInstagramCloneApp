@@ -35,7 +35,11 @@ $ npm install @angular/cli --global
 ##### :bangbang: Install [NS Schematics](https://github.com/CollegeBoreal/Tutoriels/blob/master/W.Web/T.NativeScript/Schematics.md) to generate the services
 
 ```
-$ npm install @schematics/angular @nativescript/schematics tslint --save-dev
+$ npm install @schematics/angular --save-dev 
+```
+
+```
+$ npm install @nativescript/schematics --save-dev
 ```
 
 ## :gear: Install plugins

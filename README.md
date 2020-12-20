@@ -766,3 +766,16 @@ const copyTargets = [
     ...copyReplacements
   ];
 ```
+
+
+# :construction: Reorganizing
+
+```
+$ ng generate module search --routing
+```
+
+```
+% find src -name "*.tns.ts" -exec rm {} \;
+```
+
+

@@ -226,10 +226,17 @@ $ ng generate service core/photo --skipTests=true
 
 
 ```typescript
+import { PhotosService } from "./core/photos.service";
+import { CameraService } from "./core/camera.service";
+import { LocalStorageService } from "./core/local-storage.service";
+import { FileReaderService } from "./core/file-reader.service";
+```
+
+```typescript
     providers: [
         PhotosService,
         CameraService,
-        LocalStorage,
+        LocalStorageService,
         FileReaderService
     ],
 ```

@@ -1,0 +1,333 @@
+{
+    "instagram": {
+        "home": {
+            "header": [
+                {
+                    "isOwn": true,
+                    "imageSrc": "~/assets/wk.png",
+                    "title": "Your Story"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "~/assets/face1.jpg",
+                    "title": "william"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "~/assets/face3.jpg",
+                    "title": "pavlo"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "~/assets/face4.jpg",
+                    "title": "kumaran"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "~/assets/face3.jpg",
+                    "title": "john"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "~/assets/face2.jpg",
+                    "title": "dena007"
+                }
+            ],
+            "body": [
+                {
+                    "imageSrc": "~/assets/face3.jpg",
+                    "name": "Pavlo",
+                    "location": "Lisbon Portugal",
+                    "post": "~/assets/wk.png",
+                    "likes": "400",
+                    "desc": {
+                        "person": "Pavlo ",
+                        "content": "#woorkout.pt#startup"
+                    },
+                    "time": "2 hours ago"
+                },
+                {
+                    "imageSrc": "~/assets/face4.jpg",
+                    "name": "Kumaran",
+                    "location": "Bangalore India",
+                    "post": "https://cdn.pixabay.com/photo/2018/05/03/22/34/lion-3372720__480.jpg",
+                    "likes": "300",
+                    "desc": {
+                        "person": "Kumaran ",
+                        "content": "#throwback"
+                    },
+                    "time": "3 hours ago"
+                },
+                {
+                    "imageSrc": "~/assets/face1.jpg",
+                    "name": "William",
+                    "location": "Indiana US",
+                    "post": "https://cdn.pixabay.com/photo/2018/12/29/23/49/rays-3902368__480.jpg",
+                    "likes": "500",
+                    "desc": {
+                        "person": "William ",
+                        "content": "#throwback"
+                    },
+                    "time": "4 hours ago"
+                },
+                {
+                    "imageSrc": "https://play.nativescript.org/dist/assets/img/NativeScript_logo.png",
+                    "name": "#NativeScript",
+                    "location": "Bedford MA",
+                    "post": "https://play.nativescript.org/dist/assets/img/NativeScript_logo.png",
+                    "likes": "1000",
+                    "desc": {
+                        "person": "NativeScript ",
+                        "content": "#throwback"
+                    },
+                    "time": "6 hours ago"
+                },
+                {
+                    "imageSrc": "~/assets/face2.jpg",
+                    "name": "John",
+                    "location": "San Francisco",
+                    "post": "~/assets/face2.jpg",
+                    "likes": "100",
+                    "desc": {
+                        "person": "John ",
+                        "content": "#throwback"
+                    },
+                    "time": "7 hours ago"
+                },
+                {
+                    "imageSrc": "~/assets/face3.jpg",
+                    "name": "dena007",
+                    "location": "CA",
+                    "post": "https://cdn.pixabay.com/photo/2018/10/31/22/42/surprised-3786845__480.jpg",
+                    "likes": "150",
+                    "desc": {
+                        "person": "dena007 ",
+                        "content": "#throwback"
+                    },
+                    "time": "9 hours ago"
+                }
+            ]
+        },
+        "search": {
+            "header": [
+                {
+                    "isOwn": true,
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/05/03/22/34/lion-3372720__480.jpg",
+                    "title": "For You"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/09/12/12/14/photographer-3672010__480.jpg",
+                    "title": "Style"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/23/14/19/forest-3833973__480.jpg",
+                    "title": "Fitness"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/04/04/10/11/portrait-3289372__480.jpg",
+                    "title": "Comics"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/06/14/01/pair-3798371__480.jpg",
+                    "title": "Beauty"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/17/22/15/tree-3822149__480.jpg",
+                    "title": "Travel"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/04/20/21/harley-davidson-3794909__480.jpg",
+                    "title": "Science & Tech"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/15/22/52/wolf-3818343__480.jpg",
+                    "title": "Shopping"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/12/09/14/44/leaf-3865014__480.jpg",
+                    "title": "Decor"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/07/16/13/17/kiss-3541905__480.jpg",
+                    "title": "Music"
+                }
+            ],
+            "body": [
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/09/12/12/14/photographer-3672010__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/12/29/23/49/rays-3902368__480.jpg"
+                },
+                {
+                    "imageSrc": "~/assets/face2.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/06/14/01/pair-3798371__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/12/09/14/44/leaf-3865014__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/07/16/13/17/kiss-3541905__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/15/22/52/wolf-3818343__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/12/29/23/49/rays-3902368__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/06/14/01/pair-3798371__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/12/09/14/44/leaf-3865014__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/17/22/15/tree-3822149__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/10/05/22/53/sheep-3727049__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/29/21/19/hamburg-3846525_1280.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/06/14/01/pair-3798371__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/12/29/23/49/rays-3902368__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/15/22/52/wolf-3818343__480.jpg"
+                }
+            ],
+            "midSection": {
+                "imgSrc": "https://www.gettyimages.com/gi-resources/images/CreativeLandingPage/HP_Sept_24_2018/CR3_GettyImages-159018836.jpg",
+                "imgSrc1": "https://cdn.pixabay.com/photo/2018/11/17/22/15/tree-3822149__480.jpg",
+                "imgSrc2": "https://cdn.pixabay.com/photo/2018/05/03/22/34/lion-3372720__480.jpg"
+            }
+        },
+        "notifications": [
+            {
+                "notify_time": "Yesterday",
+                "notify_list": [
+                    {
+                        "imageSrc": "https://cdn.pixabay.com/photo/2018/05/03/22/34/lion-3372720__480.jpg",
+                        "desc": {
+                            "name": "William, Pavlo, and kumaran ",
+                            "content": "shared 15 photos. ",
+                            "date": "1d"
+                        },
+                        "imageSrc2": ""
+                    },
+                    {
+                        "imageSrc": "~/assets/face4.jpg",
+                        "desc": {
+                            "name": "kumaran ",
+                            "content": "liked your post. ",
+                            "date": "1d"
+                        },
+                        "imageSrc2": "~/assets/wk.png"
+                    },
+                    {
+                        "imageSrc": "~/assets/face3.jpg",
+                        "desc": {
+                            "name": "Pavlo ",
+                            "content": "commented: Looks cool😜. ",
+                            "date": "1d"
+                        },
+                        "imageSrc2": "https://cdn.pixabay.com/photo/2018/11/04/20/21/harley-davidson-3794909__480.jpg"
+                    }
+                ]
+            },
+            {
+                "notify_time": "This Week",
+                "notify_list": [
+                    {
+                        "imageSrc": "~/assets/face1.jpg",
+                        "desc": {
+                            "name": "William ",
+                            "content": "liked your post. ",
+                            "date": "4d"
+                        },
+                        "imageSrc2": "~/assets/wk.png"
+                    },
+                    {
+                        "imageSrc": "https://play.nativescript.org/dist/assets/img/NativeScript_logo.png",
+                        "desc": {
+                            "name": "NativeScript ",
+                            "content": "shared their first post. ",
+                            "date": "5d"
+                        },
+                        "imageSrc2": "https://play.nativescript.org/dist/assets/img/NativeScript_logo.png"
+                    }
+                ]
+            },
+            {
+                "notify_time": "This Month",
+                "notify_list": [
+                    {
+                        "imageSrc": "https://cdn.pixabay.com/photo/2018/11/15/22/52/wolf-3818343__480.jpg",
+                        "desc": {
+                            "name": "William, and Pavlo ",
+                            "content": "shared 20 photos. ",
+                            "date": "1w"
+                        },
+                        "imageSrc2": ""
+                    },
+                    {
+                        "imageSrc": "https://cdn.pixabay.com/photo/2018/11/06/14/01/pair-3798371__480.jpg",
+                        "desc": {
+                            "name": "Pavlo, and kumaran ",
+                            "content": "shared 10 photos. ",
+                            "date": "3w"
+                        },
+                        "imageSrc2": ""
+                    }
+                ]
+            },
+            {
+                "notify_time": "Earlier",
+                "notify_list": [
+                    {
+                        "imageSrc": "~/assets/face4.jpg",
+                        "desc": {
+                            "name": "Kumaran ",
+                            "content": "started following you. ",
+                            "date": "5w"
+                        },
+                        "imageSrc2": ""
+                    },
+                    {
+                        "imageSrc": "~/assets/face3.jpg",
+                        "desc": {
+                            "name": "Pavlo ",
+                            "content": "started following you. ",
+                            "date": "8w"
+                        },
+                        "imageSrc2": ""
+                    },
+                    {
+                        "imageSrc": "~/assets/face1.jpg",
+                        "desc": {
+                            "name": "William ",
+                            "content": "started following you. ",
+                            "date": "14w"
+                        },
+                        "imageSrc2": ""
+                    }
+                ]
+            }
+        ]
+    }
+}

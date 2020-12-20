@@ -119,7 +119,7 @@ $ npm install @schematics/angular @nativescript/schematics tslint --save-dev
   }
 ```
 
-:pushpin: The `LocalStorage` service that uses [The application-settings module](https://docs.nativescript.org/ns-framework-modules/application-settings)
+:pushpin: The `LocalStorage` service
 
 - [ ] Generate the `LocalStorage` service
 
@@ -148,6 +148,12 @@ $ ng generate service core/localStorage --skipTests=true
   clear(): void {
     ApplicationSettings.clear();
   }
+```
+
+- [ ] Import the [The application-settings module](https://docs.nativescript.org/ns-framework-modules/application-settings) from the `core` Library
+
+```typescript
+import { ApplicationSettings } from '@nativescript/core';
 ```
 
 :pushpin: The `Photo` service

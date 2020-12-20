@@ -8,7 +8,8 @@ import { PhotosService } from "../core/photos.service";
 
 @Component({
     selector: "Home",
-    templateUrl: "./home.component.html"
+    templateUrl: "./home.component.html",
+    styleUrls: ["./home.component.css"]
 })
 export class HomeComponent implements OnInit {
 
@@ -39,7 +40,7 @@ export class HomeComponent implements OnInit {
         this.instagram = [];
         this.isSelected = '0';
         this.photos = this.photosService.getPhotos();
-        this.fileReader.readJSON('~/images/instagram.json').then(
+        this.fileReader.readJSON('/images/instagram.json').then(
             res => {
                 this.instagram = res["instagram"];
             },
@@ -64,18 +65,18 @@ export class HomeComponent implements OnInit {
                     viewContainerRef: this.vref,
                     fullscreen: true
                 };
-                setTimeout(() => { //https://github.com/NativeScript/NativeScript/issues/5744#issuecomment-384589739
-                    this.modal.showModal(FilterComponent, options).then((response) => {
-                        if (response == 'success') {
-                            this.onNavtap('profile', '4');
-                        }
-                        else {
-                            this.onNavtap('home', '0');
-                        }
-                    }, error => {
-                        console.log(error);
-                    });
-                }, 1000);
+                // setTimeout(() => { //https://github.com/NativeScript/NativeScript/issues/5744#issuecomment-384589739
+                //     this.modal.showModal(FilterComponent, options).then((response) => {
+                //         if (response == 'success') {
+                //             this.onNavtap('profile', '4');
+                //         }
+                //         else {
+                //             this.onNavtap('home', '0');
+                //         }
+                //     }, error => {
+                //         console.log(error);
+                //     });
+                // }, 1000);
             }).catch(err => {
                 console.log(err.message);
             });

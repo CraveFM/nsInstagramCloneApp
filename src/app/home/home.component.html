@@ -5,8 +5,8 @@
             marginBottom="5" columns="10, auto, auto, *, auto, auto, 10">
             <Label col="1" text="&#xf030;" class="fa android-lbl" marginright="8"
                 verticalalignment="center" fontsize="25"></Label>
-            <Image col="2" height="40" src="~/assets/title.png" stretch="aspectFill"></Image>
-            <Image col="4" width="30" height="30" src="~/assets/icon.png"
+            <Image col="2" height="40" src="~/images/title.png" stretch="aspectFill"></Image>
+            <Image col="4" width="30" height="30" src="~/images/icon.png"
                 stretch="aspectFill" marginright="15"></Image>
             <Label col="5" text="&#xf1d9;" class="fa android-lbl"
                 verticalalignment="center" fontsize="25"></Label>
@@ -136,7 +136,7 @@
                         <Image borderRadius="10%" row="0" [src]="item.imageSrc"
                             height="90" width="100" stretch="aspectFill"></Image>
                         <Image *ngIf="item.isOwn" borderRadius="100%" row="0"
-                            src="~/assets/wk.png" height="40"
+                            src="~/images/wk.png" height="40"
                             verticalAlignment="top" width="40" stretch="aspectFill"
                             marginTop="10"></Image>
                         <Label row="0" [text]="item.title" color="white"
@@ -174,7 +174,7 @@
 
             <GridLayout borderBottomWidth="0.5" borderBottomColor="gray" rows="auto, auto, auto, auto"
                 columns="auto, 15, *, 15 *, 15, *" padding="10">
-                <Image row="0" rowSpan="3" col="0" src="~/assets/wk.png"
+                <Image row="0" rowSpan="3" col="0" src="~/images/wk.png"
                     height="100" width="100" borderRadius="100%"
                     verticalAlignment="center" horizontalAlignment="center"
                     stretch="aspectFill"></Image>

@@ -646,6 +646,13 @@ import { FileReaderService } from "./core/file-reader.service";
 
 * copy `images` folder to the `src` directory
 
+- [ ] JSON Files
+
+* copy `src/app/core/instagram.json` file to the `src/app/core` directory
+
+* adjust the directory `~/assets` to `~/images`
+
+
 - [ ] Edit `webpack.config.js` file
 
 * locate the `copyTargets` variable and add the `from: 'images/**'` JSON section like below

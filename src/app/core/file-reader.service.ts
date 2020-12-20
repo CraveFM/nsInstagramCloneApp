@@ -21,6 +21,6 @@ export class FileReaderService {
                 reject(err);
             });
     });
-}
+  }
 
 }

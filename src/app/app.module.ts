@@ -9,8 +9,6 @@ import { CameraService } from "./core/camera.service";
 import { LocalStorageService } from "./core/local-storage.service";
 import { FileReaderService } from "./core/file-reader.service";
 
-
-
 @NgModule({
     bootstrap: [
         AppComponent

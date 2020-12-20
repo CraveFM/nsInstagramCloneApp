@@ -774,16 +774,18 @@ const copyTargets = [
 
 # :construction: Reorganizing
 
+:round_pushpin: `Search` Module
+
 ```
 $ ng generate module search --routing
 ```
 
 ```
-% ng generate component search/search --skip-import --skipTests=true
+% ng generate component search --skip-import --skipTests=true
 ```
 
 ```
-% find src -name "*.tns.ts" -exec rm {} \;
+% find src -name "*.tns.*" -exec rm {} \;
 ```
 
 ```
@@ -862,4 +864,24 @@ const routes: Routes = [
     { path: "default", component: HomeComponent }
 ];
 ```
+
+
+:round_pushpin: `Camera` Module
+
+```
+$ ng generate module camera --routing
+```
+
+```
+% ng generate component camera --skip-import --skipTests=true
+```
+
+```
+% find src -name "*.tns.*" -exec rm {} \;
+```
+
+```
+$ find src -name "*.spec.ts" -exec rm {} \;
+```
+
 

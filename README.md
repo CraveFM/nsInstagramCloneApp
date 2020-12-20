@@ -131,23 +131,23 @@ $ ng generate service core/localStorage --skipTests=true
 
 
 ```typescript
-    saveValue(value: any, name: string): boolean {
-        appSettings.setString(name, JSON.stringify(value));
-        return true;
-    }
+  saveValue(value: any, name: string): boolean {
+    ApplicationSettings.setString(name, JSON.stringify(value));
+    return true;
+  }
 
-    getValue(value: string): any {
-        const valueToReturn = appSettings.getString(value);
-        return valueToReturn ? JSON.parse(valueToReturn) : null;
-    }
+  getValue(value: string): any {
+      const valueToReturn = ApplicationSettings.getString(value);
+      return valueToReturn ? JSON.parse(valueToReturn) : null;
+  }
 
-    removeValue(value: string): void {
-        appSettings.remove(value);
-    }
+  removeValue(value: string): void {
+    ApplicationSettings.remove(value);
+  }
 
-    clear(): void {
-        appSettings.clear();
-    }
+  clear(): void {
+    ApplicationSettings.clear();
+  }
 ```
 
 ## :a: Home Component

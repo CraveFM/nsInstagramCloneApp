@@ -42,6 +42,10 @@ $ npm install @schematics/angular --save-dev
 $ npm install @nativescript/schematics --save-dev
 ```
 
+```
+$ npm install tslint --save-dev 
+```
+
 ## :gear: Install plugins
 
 ```
@@ -766,3 +770,137 @@ const copyTargets = [
     ...copyReplacements
   ];
 ```
+
+
+# :construction: Reorganizing
+
+:round_pushpin: `Search` Module
+
+```
+$ ng generate module search --routing
+```
+
+```
+% ng generate component search --skip-import --skipTests=true
+```
+
+```
+% find src -name "*.tns.*" -exec rm {} \;
+```
+
+```
+$ find src -name "*.spec.ts" -exec rm {} \;
+```
+
+
+- [ ] In `app.component.html` let's replace,
+
+* the current `<page-router-outlet>`
+
+```xml
+<GridLayout>
+  <page-router-outlet></page-router-outlet>
+</GridLayout>
+```
+
+* with a `<BottomNavigation>`
+
+```xml
+<BottomNavigation>
+    <TabStrip>
+        <TabStripItem class="navigation__item">
+            <!--
+                Note TabStripItem will only accept single Label and/or single Image elements that it
+                will "adopt"; any other layout elements you try to specify will be ignored
+            -->
+            <Label text="Home"></Label>
+            <Image src="font://&#xf015;" class="fas t-36"></Image>
+        </TabStripItem>
+        <TabStripItem class="navigation__item">
+            <Label text="Search"></Label>
+            <Image src="font://&#xf002;" class="fas t-36"></Image>
+        </TabStripItem>
+    </TabStrip>
+
+    <TabContentItem>
+        <page-router-outlet name="homeTab"></page-router-outlet>
+    </TabContentItem>
+
+    <TabContentItem>
+        <page-router-outlet name="searchTab"></page-router-outlet>
+    </TabContentItem>
+
+</BottomNavigation>
+```
+
+
+```typescript
+const routes: Routes = [
+    {
+        path: "",
+        redirectTo: "/(homeTab:home/default//searchTab:search/default)",
+        pathMatch: "full"
+    },
+
+    {
+        path: "home",
+        component: NSEmptyOutletComponent,
+        loadChildren: () => import("~/app/home/home.module").then((m) => m.HomeModule),
+        outlet: "homeTab"
+    },
+    {
+        path: "search",
+        component: NSEmptyOutletComponent,
+        loadChildren: () => import("~/app/search/search.module").then((m) => m.SearchModule),
+        outlet: "searchTab"
+    }
+];
+```
+
+- [ ] `home-routing.module.ts` add `default` path
+
+```
+const routes: Routes = [
+    { path: "default", component: HomeComponent }
+];
+```
+
+
+:round_pushpin: `Camera` Module
+
+```
+$ ng generate module camera --routing
+```
+
+```
+% ng generate component camera --skip-import --skipTests=true
+```
+
+```
+% find src -name "*.tns.*" -exec rm {} \;
+```
+
+```
+$ find src -name "*.spec.ts" -exec rm {} \;
+```
+
+
+:round_pushpin: `Profile` Module
+
+```
+$ ng generate module profile --routing
+```
+
+```
+% ng generate component profile --skip-import --skipTests=true
+```
+
+```
+% find src -name "*.tns.*" -exec rm {} \;
+```
+
+```
+$ find src -name "*.spec.ts" -exec rm {} \;
+```
+
+

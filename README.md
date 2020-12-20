@@ -816,3 +816,28 @@ $ ng generate module search --routing
     </TabContentItem>
 
 </BottomNavigation>
+```
+
+
+```json
+const routes: Routes = [
+    {
+        path: "",
+        redirectTo: "/(homeTab:home/default//searchTab:search/default)",
+        pathMatch: "full"
+    },
+
+    {
+        path: "home",
+        component: NSEmptyOutletComponent,
+        loadChildren: () => import("~/app/home/home.module").then((m) => m.HomeModule),
+        outlet: "homeTab"
+    },
+    {
+        path: "search",
+        component: NSEmptyOutletComponent,
+        loadChildren: () => import("~/app/search/search.module").then((m) => m.SearchModule),
+        outlet: "searchTab"
+    }
+];
+```

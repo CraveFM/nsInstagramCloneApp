@@ -5,7 +5,7 @@ import { LocalStorageService } from './local-storage.service';
 @Injectable({
   providedIn: 'root'
 })
-export class PhotoService {
+export class PhotosService {
 
   private takenPhoto: ImageAsset;
 
@@ -42,27 +42,26 @@ export class PhotoService {
 
   getPhotos() {
     return this.photos;
-}
+  }
 
-addPhoto() {
+  addPhoto() {
 
-    const photoToAdd: string = this.photoExamples[Math.floor(Math.random() * (this.photoExamples.length - 1)) + 1];
-    if (photoToAdd != '') {
-        this.photos.unshift(photoToAdd);
-        this.localStorageService.saveValue(JSON.stringify(this.photos), 'photos');
-    }
-}
+      const photoToAdd: string = this.photoExamples[Math.floor(Math.random() * (this.photoExamples.length - 1)) + 1];
+      if (photoToAdd != '') {
+          this.photos.unshift(photoToAdd);
+          this.localStorageService.saveValue(JSON.stringify(this.photos), 'photos');
+      }
+  }
 
-getFromLocalStorage() {
-    if (!this.localStorageService.getValue('photos')) {
-        // console.log('FIRST TIME, SAVING VALUES');
-        this.localStorageService.saveValue(JSON.stringify(this.photos), 'photos');
-    } else {
-        // console.log('NOT FIRST TIME, GETTING VALUES');
-        this.photos = JSON.parse(this.localStorageService.getValue('photos'));
-    }
+  getFromLocalStorage() {
+      if (!this.localStorageService.getValue('photos')) {
+          // console.log('FIRST TIME, SAVING VALUES');
+          this.localStorageService.saveValue(JSON.stringify(this.photos), 'photos');
+      } else {
+          // console.log('NOT FIRST TIME, GETTING VALUES');
+          this.photos = JSON.parse(this.localStorageService.getValue('photos'));
+      }
 
-}
-
+  }
 
 }

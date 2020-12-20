@@ -66,6 +66,28 @@ $ npm install @schematics/angular @nativescript/schematics tslint --save-dev
     requestPermissions();
 ```
 
+```typescript
+  takePhoto() {
+
+    let options = {
+        width: this.width,
+        height: this.height,
+        keepAspectRatio: this.keepAspectRatio,
+        saveToGallery: this.saveToGallery
+    };
+
+    return takePicture(options);
+
+  }
+```
+
+```typescript
+  onCheckForCamera() {
+    let isCameraAvailable = isAvailable();
+    console.log("Is camera hardware available: " + isCameraAvailable);
+  }
+```
+
 
 ## :a: Home Component
 

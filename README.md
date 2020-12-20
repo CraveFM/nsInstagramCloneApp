@@ -42,6 +42,10 @@ $ npm install @schematics/angular --save-dev
 $ npm install @nativescript/schematics --save-dev
 ```
 
+```
+$ npm install tslint --save-dev 
+```
+
 ## :gear: Install plugins
 
 ```

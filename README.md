@@ -742,14 +742,13 @@ import { FileReaderService } from "./core/file-reader.service";
 
 - [ ] Photos
 
-* copy `images` folder to the `src` directory
+* copy `assets` folder to the `src` directory
+
+* rename the directory `assets` to `images`
 
 - [ ] JSON Files
 
-* copy `src/app/core/instagram.json` file to the `src/app/core` directory
-
-* adjust the directory `~/assets` to `~/images`
-
+* copy `src/app/core/instagram.json` file to the `src/images` directory
 
 - [ ] Edit `webpack.config.js` file
 

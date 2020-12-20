@@ -1,0 +1,52 @@
+<!-- search screen -->
+<ScrollView row="1" [visibility]="selectedRoute == 'search' ? 'visible' : 'collapse'">
+
+    <StackLayout>
+
+        <GridLayout columns="auto, *, auto">
+            <Label col="0" text="&#xf002;" class="fa" fontSize="25"
+                verticalAlignment="center" padding="10" color="black"></Label>
+            <Label col="1" text="Search" fontSize="20" verticalAlignment="center"
+                padding="10"></Label>
+            <Label col="2" text="&#xf16d;" class="fa" fontSize="25"
+                verticalAlignment="center" padding="10" color="black"></Label>
+        </GridLayout>
+
+        <ScrollView orientation="horizontal" scrollBarIndicatorVisible="false">
+            <StackLayout orientation="horizontal">
+                <GridLayout *ngFor="let item of instagram.search.header"
+                    height="90" rows="auto" style="margin: 5;">
+                    <Image borderRadius="10%" row="0" [src]="item.imageSrc"
+                        height="90" width="100" stretch="aspectFill"></Image>
+                    <Image *ngIf="item.isOwn" borderRadius="100%" row="0"
+                        src="~/images/wk.png" height="40"
+                        verticalAlignment="top" width="40" stretch="aspectFill"
+                        marginTop="10"></Image>
+                    <Label row="0" [text]="item.title" color="white"
+                        fontSize="15" fontWeight="bold" verticalAlignment="bottom"
+                        horizontalAlignment="center" marginBottom="10"
+                        [ngClass]="{ shisown : item.isOwn }">
+                    </Label>
+                </GridLayout>
+            </StackLayout>
+        </ScrollView>
+
+        <GridLayout rows="auto, auto" columns="*, *, *" marginTop="5">
+            <Image borderColor="white" borderWidth="1" row="0" col="0"
+                [src]="instagram.search.midSection.imgSrc" stretch="aspectFill"></Image>
+            <Image borderColor="white" borderWidth="1" row="1" col="0"
+                [src]="instagram.search.midSection.imgSrc1" stretch="aspectFill"></Image>
+            <Image borderColor="white" borderWidth="1" row="0" col="1"
+                rowSpan="2" colSpan="2" [src]="instagram.search.midSection.imgSrc2"
+                stretch="aspectFill"></Image>
+        </GridLayout>
+
+        <FlexboxLayout flexWrap="wrap" width="100%">
+            <Image *ngFor="let item of instagram.search.body" borderColor="white"
+                borderWidth="1" [src]="item.imageSrc" [height]="photoHeight"
+                [width]="photoWidth" stretch="aspectFill"></Image>
+        </FlexboxLayout>
+
+    </StackLayout>
+</ScrollView>
+

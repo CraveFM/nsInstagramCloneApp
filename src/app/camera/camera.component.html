@@ -1,0 +1,12 @@
+<ActionBar class="action-bar">
+    <Label text="Camera"></Label>
+</ActionBar>
+
+<GridLayout rows="auto, *, auto">
+	<StackLayout orientation="horizontal" row="0" padding="10">
+		<Label text="saveToGallery"></Label>
+		<Switch [(ngModel)]="saveToGallery"></Switch>
+	</StackLayout>
+	<Image row="1" [src]="cameraImage" stretch="fill" margin="10"></Image>
+	<Button text="Take Picture" (tap)="onNavtap($event,'3')" row="2" padding="10"></Button>
+</GridLayout>

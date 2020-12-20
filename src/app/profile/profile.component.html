@@ -1,0 +1,82 @@
+<GridLayout rows="auto, * ,50" class="page">
+    <GridLayout *ngIf="selectedRoute == 'profile' ? true : false"
+        marginTop="5" marginBottom="5" columns="15, auto, auto, *, auto, auto, 10">
+        <label col="1" text="woorkout.pt" verticalalignment="center"
+            fontsize="20" class="android-lbl"></label>
+        <Label col="2" text="&#xf0d7;" class="fa android-lbl" marginleft="8"
+            verticalalignment="center" fontsize="20"></Label>
+
+        <Label col="4" text="&#xf017;" class="fa android-lbl"
+            verticalalignment="center" fontsize="25" marginright="15"></Label>
+        <Label col="5" text="&#xf0ae;" class="fa android-lbl"
+            verticalalignment="center" fontsize="20"></Label>
+        <Label col="5" text="2" borderRadius="100%" width="20" height="20"
+            style="background: #ff4b60; color: white; margin-left:15; margin-bottom: 20;"
+            verticalAlignment="top" horizontalAlignment="right"
+            textAlignment="center"></Label>
+    </GridLayout>
+
+    <!-- profile -->
+    <ScrollView row="1" [visibility]="selectedRoute == 'profile' ? 'visible' : 'collapse'">
+
+        <StackLayout>
+
+            <GridLayout borderBottomWidth="0.5" borderBottomColor="gray" rows="auto, auto, auto, auto"
+                columns="auto, 15, *, 15 *, 15, *" padding="10">
+                <Image row="0" rowSpan="3" col="0" src="~/images/wk.png"
+                    height="100" width="100" borderRadius="100%"
+                    verticalAlignment="center" horizontalAlignment="center"
+                    stretch="aspectFill"></Image>
+                <Label row="0" rowSpan="3" col="0" borderRadius="100%" width="30"
+                    height="30" text="&#xf055;" fontSize="30" backgroundColor="white"
+                    color="#2E93F0" class="fa" textAlignment="center"
+                    verticalAlignment="bottom" horizontalAlignment="center"
+                    marginLeft="70"></Label>
+
+                <Label row="0" col="2" fontWeight="bold" horizontalAlignment="center"
+                    verticalAlignment="bottom" [text]="photos.length" class="android-lbl"></Label>
+                <Label row="0" col="4" fontWeight="bold" horizontalAlignment="center"
+                    verticalAlignment="bottom" text="220" class="android-lbl"></Label>
+                <Label row="0" col="6" fontWeight="bold" horizontalAlignment="center"
+                    verticalAlignment="bottom" text="430" class="android-lbl"></Label>
+
+                <Label row="1" col="2" horizontalAlignment="center"
+                    verticalAlignment="top" color="gray" fontSize="14" text="posts"
+                    textWrap="true"></Label>
+                <Label row="1" col="4" horizontalAlignment="center"
+                    verticalAlignment="top" fontSize="14" color="gray" text="followers"
+                    textWrap="true"></Label>
+                <Label row="1" col="6" horizontalAlignment="center"
+                    verticalAlignment="top" fontSize="14" color="gray" text="following"
+                    textWrap="true"></Label>
+
+                <Label row="2" col="2" colSpan="5" class="android-lbl" text="Edit Profile"
+                    borderWidth="0.5" borderColor="gray" borderRadius="5"
+                    verticalAlignment="top" textAlignment="center" padding="5"></Label>
+
+                <Label row="3" col="0" colSpan="7" text="Woorkout" fontWeight="bold"
+                    textWrap="true" class="android-lbl" marginTop="20"
+                    marginBottom="10" marginLeft="5"></Label>
+            </GridLayout>
+
+            <GridLayout height="40" columns="*,*,*">
+                <Label text="&#xf00a;" fontSize="25" color="#2E93F0" col="0"
+                    class="fa" textAlignment="center" verticalAlignment="center"
+                    horizontalAlignment="center"></Label>
+                <Label text="&#xf0c9;" fontSize="25" col="1" class="fa android-lbl"
+                    textAlignment="center" verticalAlignment="center"
+                    horizontalAlignment="center"></Label>
+                <Label text="&#xf02c;" fontSize="25" col="2" class="fa android-lbl"
+                    textAlignment="center" verticalAlignment="center"
+                    horizontalAlignment="center"></Label>
+            </GridLayout>
+
+            <FlexboxLayout flexWrap="wrap" width="100%">
+                <Image *ngFor="let photo of photos" borderColor="white"
+                    borderWidth="1" [src]="photo" [height]="photoHeight"
+                    [width]="photoWidth" stretch="aspectFill"></Image>
+            </FlexboxLayout>
+
+        </StackLayout>
+    </ScrollView>
+</GridLayout>

@@ -1,3 +1,44 @@
-<GridLayout>
-  <page-router-outlet></page-router-outlet>
-</GridLayout>
+<BottomNavigation>
+  <TabStrip>
+      <TabStripItem class="navigation__item">
+          <!--
+              Note TabStripItem will only accept single Label and/or single Image elements that it
+              will "adopt"; any other layout elements you try to specify will be ignored
+          -->
+          <Image src="font://&#xf015;" class="fa android-lbl"></Image>
+      </TabStripItem>
+      <TabStripItem class="navigation__item">
+          <Image src="font://&#xf002;" class="fa android-lbl"></Image>
+      </TabStripItem>
+      <TabStripItem class="navigation__item">
+        <Image src="font://&#xf196;" class="fa android-lbl"></Image>
+      </TabStripItem>
+      <TabStripItem class="navigation__item">
+        <Image src="font://&#xf08a;" class="fa android-lbl"></Image>
+      </TabStripItem>
+      <TabStripItem class="navigation__item">
+        <Image src="font://&#xf007;" class="fa android-lbl"></Image>
+      </TabStripItem>
+  </TabStrip>
+
+  <TabContentItem>
+      <page-router-outlet name="homeTab"></page-router-outlet>
+  </TabContentItem>
+
+  <TabContentItem>
+      <page-router-outlet name="searchTab"></page-router-outlet>
+  </TabContentItem>
+
+  <TabContentItem>
+    <page-router-outlet name="cameraTab"></page-router-outlet>
+  </TabContentItem>
+
+  <TabContentItem>
+    <page-router-outlet name="notificationsTab"></page-router-outlet>
+  </TabContentItem>
+
+  <TabContentItem>
+    <page-router-outlet name="profileTab"></page-router-outlet>
+  </TabContentItem>
+
+</BottomNavigation>

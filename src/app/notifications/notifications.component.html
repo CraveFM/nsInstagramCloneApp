@@ -1,0 +1,61 @@
+<!-- notifications screen -->
+
+<GridLayout row="1" rows="auto, *" [visibility]="selectedRoute == 'notifications' ? 'visible' : 'collapse'">
+
+    <GridLayout row="0" columns="*, *" marginTop="5">
+        <Label col="0" text="FOLLOWING" fontSize="20" padding="5" color="#cccccc"
+            textAlignment="center" style="border-bottom-width: 1; border-bottom-color: #cccccc;"></Label>
+        <Label col="1" text="YOU" fontSize="20" padding="5" color="black"
+            textAlignment="center" style="border-bottom-width: 1; border-bottom-color: black;"></Label>
+    </GridLayout>
+    <ScrollView row="1">
+        <StackLayout>
+            <GridLayout rows="auto, auto" columns="10, auto,10, *">
+                <Label row="0" col="1" rowSpan="2" text="&#xf2bd;" class="fa followreq-image"
+                    verticalAlignment="top"></Label>
+                <Label row="0" col="1" rowSpan="2" text="2" borderRadius="100%"
+                    width="20" style="background: #ff4b60; color: white; margin-top: 25;"
+                    verticalAlignment="top" horizontalAlignment="right"
+                    textAlignment="center"></Label>
+                <StackLayout row="0" rowSpan="2" col="3" marginTop="30">
+                    <Label text="Follow Requests" fontSize="16"
+                        fontweight="bold" color="black"></Label>
+                    <Label text="Approve or ignore requests" fontSize="14"
+                        color="#4c4c4c" marginTop="3"></Label>
+                </StackLayout>
+            </GridLayout>
+
+            <GridLayout rows="auto, auto" columns="10, *" *ngFor="let item of instagram.notifications">
+                <Label row="0" col="1" [text]="item.notify_time"
+                    marginTop="20" marginBottom="20" color="#4c4c4c"></Label>
+
+                <StackLayout orientation="vertical" row="1" col="1">
+                    <GridLayout columns="auto,10, *, auto, 10" *ngFor="let notify_list of item.notify_list"
+                        orientation="vertical" marginBottom="20">
+                        <Image [src]="notify_list.imageSrc" col="0"
+                            borderRadius="100%" height="60" width="60"
+                            verticalAlignment="center"
+                            horizontalAlignment="center" stretch="aspectFill"></Image>
+                        <StackLayout col="2" verticalAlignment="center">
+                            <Label textWrap="true">
+                                <FormattedString>
+                                    <Span [text]="notify_list.desc.name"
+                                        fontWeight="bold" color="black"></Span>
+                                    <Span [text]="notify_list.desc.content"
+                                        color="black"></Span>
+                                    <Span [text]="notify_list.desc.date"
+                                        color="#4c4c4c"></Span>
+                                </FormattedString>
+                            </Label>
+                        </StackLayout>
+                        <Image *ngIf="notify_list.imageSrc2" [src]="notify_list.imageSrc2"
+                            col="3" borderRadius="5" height="60" width="60"
+                            verticalAlignment="center"
+                            horizontalAlignment="center" stretch="aspectFill"></Image>
+                    </GridLayout>
+                </StackLayout>
+
+            </GridLayout>
+        </StackLayout>
+    </ScrollView>
+</GridLayout>

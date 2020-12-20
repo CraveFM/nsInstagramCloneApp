@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Screen } from "@nativescript/core";
+import { Page, Screen } from "@nativescript/core";
 import { FileReaderService } from '../core/file-reader.service';
 import { PhotosService } from '../core/photos.service';
 
@@ -18,9 +18,11 @@ export class SearchComponent implements OnInit {
 
   constructor(
     private fileReader: FileReaderService
+    , private page: Page
     ) { }
 
   ngOnInit(): void {
+    this.page.actionBarHidden = true;
     this.selectedRoute = 'search';
     this.photoWidth = Screen.mainScreen.widthDIPs * 0.33333;
     this.photoHeight = this.photoWidth;

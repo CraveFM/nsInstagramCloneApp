@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Page } from "@nativescript/core";
 import { FileReaderService } from "../core/file-reader.service";
 
 @Component({
@@ -15,10 +16,12 @@ export class NotificationsComponent implements OnInit {
 
     constructor(
         private fileReader: FileReaderService
+        , private page: Page
       ) { }
   
 
     ngOnInit(): void {
+        this.page.actionBarHidden = true;
         this.selectedRoute = 'notifications';
         this.instagram = [];
         this.isSelected = '5';

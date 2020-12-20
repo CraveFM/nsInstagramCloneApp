@@ -150,6 +150,12 @@ $ ng generate service core/localStorage --skipTests=true
   }
 ```
 
+:pushpin: The `LocalStorage` service
+
+```
+$ ng generate service core/photo --skipTests=true 
+```
+
 ## :a: Home Component
 
 :round_pushpin: in the HomeComponent `Class`

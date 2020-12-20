@@ -150,7 +150,7 @@ $ ng generate service core/localStorage --skipTests=true
   }
 ```
 
-- [ ] Import the [The application-settings module](https://docs.nativescript.org/ns-framework-modules/application-settings) from the `core` Library
+- [ ] Import the [application-settings module](https://docs.nativescript.org/ns-framework-modules/application-settings) from the `core` Library
 
 ```typescript
 import { ApplicationSettings } from '@nativescript/core';

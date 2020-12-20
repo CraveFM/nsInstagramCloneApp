@@ -118,6 +118,7 @@ module.exports = env => {
   const copyTargets = [
     { from: 'assets/**', noErrorOnMissing: true, globOptions: { dot: false, ...copyIgnore } },
     { from: 'fonts/**', noErrorOnMissing: true, globOptions: { dot: false, ...copyIgnore } },
+    { from: 'images/**', noErrorOnMissing: true, globOptions: { dot: false, ...copyIgnore } },
     ...copyReplacements
   ];
 

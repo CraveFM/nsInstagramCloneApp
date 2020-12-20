@@ -3,3 +3,15 @@
 
 /* Place any CSS rules you want to apply on both iOS and Android here.
 This is where the vast majority of your CSS code goes. */
+
+.btn {
+    font-size: 18;
+}
+
+.fa {
+  font-family: 'FontAwesome'
+}
+
+.android-lbl{
+  color: black;
+}

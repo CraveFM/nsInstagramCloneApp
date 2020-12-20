@@ -256,15 +256,44 @@ import { FileReaderService } from "./core/file-reader.service";
 
 ```typescript
     // github repo link - https://github.com/kumarandena/nativescript-instagram-clone
-
-    photoWidth: number = screen.mainScreen.widthDIPs * 0.33333;
-    photoHeight: number = this.photoWidth;
-
-    photos: string[] = [];
-
-    instagram: any[] = [];
-
-    isSelected: string = '0';
+    photoWidth: number;
+    photoHeight: number;
+    photos: string[];
+    instagram: any[];
+    isSelected: string;
 ```
 
+- [ ] Edit the constructor
 
+```typescript
+    constructor(
+        private photosService: PhotosService
+      , private camera: CameraService
+      , private fileReader: FileReaderService
+      , private modal: ModalDialogService
+      , private vref: ViewContainerRef
+      , private cd: ChangeDetectorRef
+      , private page: Page
+      ) { }
+```
+
+- [ ] Edit the `ngOnInit` method
+
+```typescript
+    ngOnInit(): void {
+        this.photoWidth = Screen.mainScreen.widthDIPs * 0.33333;
+        this.photoHeight = this.photoWidth;
+        this.photos = [];
+        this.instagram = [];
+        this.isSelected = '0';
+        this.photos = this.photosService.getPhotos();
+        this.fileReader.readJSON('/core/instagram.json').then(
+            res => {
+                this.instagram = res["instagram"];
+            },
+            err => {
+                console.log('Error reading json: ' + JSON.stringify(err));
+            }
+        )
+    }
+```

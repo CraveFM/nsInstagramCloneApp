@@ -45,7 +45,7 @@ $ npm install @schematics/angular @nativescript/schematics tslint --save-dev
 ```
 
 
-:pushpin: Create the `Camera` service
+:pushpin: The `Camera` service
 
 - [ ] Generate the `Camera` service
 
@@ -53,13 +53,17 @@ $ npm install @schematics/angular @nativescript/schematics tslint --save-dev
 % ng generate service core/camera --skipTests=true 
 ```
 
-- [ ] Add the instance variables that will be used later on
+- [ ] In the `camera.service.ts` add the instance variables that will be used later on
 
-```
+```typescript
     public saveToGallery: boolean = false;
     public keepAspectRatio: boolean = true;
     public width: number = 200;
     public height: number = 200;
+```
+
+```typescript
+    requestPermissions();
 ```
 
 

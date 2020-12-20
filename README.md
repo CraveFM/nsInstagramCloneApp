@@ -778,4 +778,41 @@ $ ng generate module search --routing
 % find src -name "*.tns.ts" -exec rm {} \;
 ```
 
+- [ ] In `app.component.html` let's replace,
 
+* the current `<page-router-outlet>`
+
+```xml
+<GridLayout>
+  <page-router-outlet></page-router-outlet>
+</GridLayout>
+```
+
+* with a `<BottomNavigation>`
+
+```xml
+<BottomNavigation>
+    <TabStrip>
+        <TabStripItem class="navigation__item">
+            <!--
+                Note TabStripItem will only accept single Label and/or single Image elements that it
+                will "adopt"; any other layout elements you try to specify will be ignored
+            -->
+            <Label text="Home"></Label>
+            <Image src="font://&#xf015;" class="fas t-36"></Image>
+        </TabStripItem>
+        <TabStripItem class="navigation__item">
+            <Label text="Search"></Label>
+            <Image src="font://&#xf002;" class="fas t-36"></Image>
+        </TabStripItem>
+    </TabStrip>
+
+    <TabContentItem>
+        <page-router-outlet name="homeTab"></page-router-outlet>
+    </TabContentItem>
+
+    <TabContentItem>
+        <page-router-outlet name="searchTab"></page-router-outlet>
+    </TabContentItem>
+
+</BottomNavigation>

@@ -106,6 +106,8 @@ $ npm install @schematics/angular @nativescript/schematics tslint --save-dev
 
 ```typescript
   readJSON(path: string): Promise<Object> {
+    console.log('Path: '+this.documents.path);
+    console.log('File: '+path);
     let jsonFile = this.documents.getFile(path);
     return new Promise<Object>((resolve, reject) => {
         jsonFile.readText().then((content: string) => {
@@ -289,7 +291,7 @@ import { FileReaderService } from "./core/file-reader.service";
         this.instagram = [];
         this.isSelected = '0';
         this.photos = this.photosService.getPhotos();
-        this.fileReader.readJSON('/core/instagram.json').then(
+        this.fileReader.readJSON('/images/instagram.json').then(
             res => {
                 this.instagram = res["instagram"];
             },
@@ -341,7 +343,7 @@ import { FileReaderService } from "./core/file-reader.service";
     }
 ```
 
-## :round_pushpin: template
+:round_pushpin: template
 
 ```xml
 <GridLayout rows="auto, * ,50" class="page">
@@ -351,8 +353,8 @@ import { FileReaderService } from "./core/file-reader.service";
             marginBottom="5" columns="10, auto, auto, *, auto, auto, 10">
             <Label col="1" text="&#xf030;" class="fa android-lbl" marginright="8"
                 verticalalignment="center" fontsize="25"></Label>
-            <Image col="2" height="40" src="~/assets/title.png" stretch="aspectFill"></Image>
-            <Image col="4" width="30" height="30" src="~/assets/icon.png"
+            <Image col="2" height="40" src="~/images/title.png" stretch="aspectFill"></Image>
+            <Image col="4" width="30" height="30" src="~/images/icon.png"
                 stretch="aspectFill" marginright="15"></Image>
             <Label col="5" text="&#xf1d9;" class="fa android-lbl"
                 verticalalignment="center" fontsize="25"></Label>
@@ -482,7 +484,7 @@ import { FileReaderService } from "./core/file-reader.service";
                         <Image borderRadius="10%" row="0" [src]="item.imageSrc"
                             height="90" width="100" stretch="aspectFill"></Image>
                         <Image *ngIf="item.isOwn" borderRadius="100%" row="0"
-                            src="~/assets/wk.png" height="40"
+                            src="~/images/wk.png" height="40"
                             verticalAlignment="top" width="40" stretch="aspectFill"
                             marginTop="10"></Image>
                         <Label row="0" [text]="item.title" color="white"
@@ -520,7 +522,7 @@ import { FileReaderService } from "./core/file-reader.service";
 
             <GridLayout borderBottomWidth="0.5" borderBottomColor="gray" rows="auto, auto, auto, auto"
                 columns="auto, 15, *, 15 *, 15, *" padding="10">
-                <Image row="0" rowSpan="3" col="0" src="~/assets/wk.png"
+                <Image row="0" rowSpan="3" col="0" src="~/images/wk.png"
                     height="100" width="100" borderRadius="100%"
                     verticalAlignment="center" horizontalAlignment="center"
                     stretch="aspectFill"></Image>
@@ -666,6 +668,55 @@ import { FileReaderService } from "./core/file-reader.service";
 </GridLayout>
 ```
 
+:round_pushpin:  StyleSheet
+
+- [ ] Open the `home.component.ts` class file, add the `styleUrls` property to the `@Component` Decorator:
+
+```typescript
+@Component({
+    selector: "Home",
+    templateUrl: "./home.component.html",
+    styleUrls: ['./home.component.css']
+})
+```
+
+- [ ] Add a new file `home.component.ccs`
+
+```
+.imgheaderown {
+    height: 70;
+    width: 70;
+}
+
+.imgheader {
+    height: 60;
+    width: 60;
+}
+
+.shisown {
+    border-bottom-width: 2;
+    border-bottom-color: white;
+}
+
+.followreq-image {
+    color: #dfdfdf;
+    height: 60;
+    width: 60;
+    font-size: 60;
+    padding: 0;
+    margin-bottom: 5;
+    margin-top: 20;
+}
+
+.tabselected {
+    color: #ff4b60;
+}
+
+.tabnotselected {
+    color: black;
+}
+```
+
 # Resources
 
 - [ ] Fonts
@@ -691,14 +742,13 @@ import { FileReaderService } from "./core/file-reader.service";
 
 - [ ] Photos
 
-* copy `images` folder to the `src` directory
+* copy `assets` folder to the `src` directory
+
+* rename the directory `assets` to `images`
 
 - [ ] JSON Files
 
-* copy `src/app/core/instagram.json` file to the `src/app/core` directory
-
-* adjust the directory `~/assets` to `~/images`
-
+* copy `src/app/core/instagram.json` file to the `src/images` directory
 
 - [ ] Edit `webpack.config.js` file
 

@@ -90,6 +90,36 @@ $ npm install @schematics/angular @nativescript/schematics tslint --save-dev
   }
 ```
 
+:pushpin: The `FileReader` service
+
+- [ ] Generate the `FileReader` service
+
+```
+% ng generate service core/fileReader --skipTests=true 
+```
+
+- [ ] In the `file-reader.service.ts` add the instance variables that will be used later on
+
+```typescript
+  documents = knownFolders.currentApp();
+```
+
+```typescript
+  readJSON(path: string): Promise<Object> {
+    let jsonFile = this.documents.getFile(path);
+    return new Promise<Object>((resolve, reject) => {
+        jsonFile.readText().then((content: string) => {
+            let data = <Array<Object>>JSON.parse(content);
+            resolve(data);
+        })
+            .catch((err) => {
+                reject(err);
+            });
+    });
+  }
+```
+
+
 
 ## :a: Home Component
 

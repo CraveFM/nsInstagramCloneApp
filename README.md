@@ -1,4 +1,4 @@
-# Gestures App
+# Instagram Clone App
 
 [<img src="https://github.com/angular/angular/blob/master/aio/src/assets/images/logos/angular/angular.png" width="31" height="31"></img>](https://play.nativescript.org/?template=play-ng&id=Wh9rvG&v=49) Adding Basic Gestures to Your Apps
 
@@ -252,6 +252,19 @@ import { FileReaderService } from "./core/file-reader.service";
 
 :round_pushpin: in the HomeComponent `Class`
 
-- [ ] Add the `log` instance variables that will be used later on
+- [ ] Add the instance variables that will be used later on
+
+```typescript
+    // github repo link - https://github.com/kumarandena/nativescript-instagram-clone
+
+    photoWidth: number = screen.mainScreen.widthDIPs * 0.33333;
+    photoHeight: number = this.photoWidth;
+
+    photos: string[] = [];
+
+    instagram: any[] = [];
+
+    isSelected: string = '0';
+```
 
 

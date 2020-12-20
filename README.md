@@ -885,3 +885,22 @@ $ find src -name "*.spec.ts" -exec rm {} \;
 ```
 
 
+:round_pushpin: `Profile` Module
+
+```
+$ ng generate module profile --routing
+```
+
+```
+% ng generate component profile --skip-import --skipTests=true
+```
+
+```
+% find src -name "*.tns.*" -exec rm {} \;
+```
+
+```
+$ find src -name "*.spec.ts" -exec rm {} \;
+```
+
+

@@ -261,6 +261,7 @@ import { FileReaderService } from "./core/file-reader.service";
     photos: string[];
     instagram: any[];
     isSelected: string;
+    selectedRoute: string;
 ```
 
 - [ ] Edit the constructor
@@ -281,6 +282,7 @@ import { FileReaderService } from "./core/file-reader.service";
 
 ```typescript
     ngOnInit(): void {
+        this.selectedRoute = 'home';
         this.photoWidth = Screen.mainScreen.widthDIPs * 0.33333;
         this.photoHeight = this.photoWidth;
         this.photos = [];
@@ -295,5 +297,16 @@ import { FileReaderService } from "./core/file-reader.service";
                 console.log('Error reading json: ' + JSON.stringify(err));
             }
         )
+    }
+```
+
+- [ ] Add the `onNavtap` method
+
+
+```typescript
+    onNavtap(route: string, selectedTab: string) {
+        this.isSelected = selectedTab;
+        this.selectedRoute = route;
+        this.cd.detectChanges();
     }
 ```

@@ -819,7 +819,7 @@ $ ng generate module search --routing
 ```
 
 
-```json
+```typescript
 const routes: Routes = [
     {
         path: "",

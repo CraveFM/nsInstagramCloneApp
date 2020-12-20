@@ -106,6 +106,8 @@ $ npm install @schematics/angular @nativescript/schematics tslint --save-dev
 
 ```typescript
   readJSON(path: string): Promise<Object> {
+    console.log('Path: '+this.documents.path);
+    console.log('File: '+path);
     let jsonFile = this.documents.getFile(path);
     return new Promise<Object>((resolve, reject) => {
         jsonFile.readText().then((content: string) => {

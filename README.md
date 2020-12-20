@@ -779,8 +779,17 @@ $ ng generate module search --routing
 ```
 
 ```
+% ng generate component search/search --skip-import --skipTests=true
+```
+
+```
 % find src -name "*.tns.ts" -exec rm {} \;
 ```
+
+```
+$ find src -name "*.spec.ts" -exec rm {} \;
+```
+
 
 - [ ] In `app.component.html` let's replace,
 
@@ -848,15 +857,9 @@ const routes: Routes = [
 
 - [ ] `home-routing.module.ts` add `default` path
 
+```
 const routes: Routes = [
     { path: "default", component: HomeComponent }
 ];
-
-
-```
-$ find src -name "*.tns.ts" -exec rm {} \;
 ```
 
-```
-$ find src -name "*.spec.ts" -exec rm {} \;
-```

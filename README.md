@@ -119,6 +119,13 @@ $ npm install @schematics/angular @nativescript/schematics tslint --save-dev
   }
 ```
 
+:pushpin: The `LocalStorage` service
+
+- [ ] Generate the `LocalStorage` service
+
+```
+$ ng generate service core/localStorage --skipTests=true 
+```
 
 
 ## :a: Home Component

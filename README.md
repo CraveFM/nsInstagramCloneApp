@@ -291,7 +291,7 @@ import { FileReaderService } from "./core/file-reader.service";
         this.instagram = [];
         this.isSelected = '0';
         this.photos = this.photosService.getPhotos();
-        this.fileReader.readJSON('/core/instagram.json').then(
+        this.fileReader.readJSON('/images/instagram.json').then(
             res => {
                 this.instagram = res["instagram"];
             },

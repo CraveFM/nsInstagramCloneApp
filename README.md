@@ -127,7 +127,7 @@ $ npm install @schematics/angular @nativescript/schematics tslint --save-dev
 $ ng generate service core/localStorage --skipTests=true 
 ```
 
-- [ ] In the `local-storage.service.ts` add the instance variables that will be used later on
+- [ ] In the `local-storage.service.ts` add the `getter-setter` methods that will be used later on
 
 
 ```typescript
